@@ -17,6 +17,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
+  "types": [
+    "./src/globals.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "build",
