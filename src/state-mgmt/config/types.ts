@@ -8,3 +8,5 @@ export interface Action {
 export interface State {
   userList: UserListState;
 }
+
+export type Reducer<T> = (state: T, action: Action) => T;

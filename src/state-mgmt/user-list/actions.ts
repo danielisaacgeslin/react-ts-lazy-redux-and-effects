@@ -1,9 +1,10 @@
 import { UserModel } from '../../models';
+import { userListStateName } from './state';
 
 export const UserListActionTypes = {
-  'ADD': '[user-list] add',
-  'ADD_SUCCESS': '[user-list] add success',
-  'ADD_ERROR': '[user-list] add error'
+  'ADD': `[${userListStateName}] add`,
+  'ADD_SUCCESS': `[${userListStateName}] add success`,
+  'ADD_ERROR': `[${userListStateName}] add error`
 };
 
 export const userListActions = {

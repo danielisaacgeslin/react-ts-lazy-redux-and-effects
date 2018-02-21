@@ -1,12 +1,15 @@
 import { Action } from '../config';
 import { UserListActionTypes } from './actions';
-import { UserListState } from './state';
+import { UserListState, userListStateName } from './state';
+import { reducerRegistry } from '../config/reducer-registry';
 
 export const userListReducer = (state = new UserListState(), action: Action): UserListState => {
   switch (action.type) {
-    case UserListActionTypes.ADD_SUCCESS:
+    case UserListActionTypes.ADD:
       return new UserListState({ list: state.list.concat(action.payload) });
     default:
       return state;
   }
 };
+
+reducerRegistry.register(userListStateName, userListReducer);

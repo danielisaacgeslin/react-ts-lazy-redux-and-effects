@@ -1,3 +1,3 @@
+export * from './reducer-registry';
 export * from './store';
-export * from './reducers';
 export * from './types';
