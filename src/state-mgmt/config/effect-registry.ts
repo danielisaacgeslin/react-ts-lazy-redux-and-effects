@@ -4,6 +4,7 @@ export type WrappedEffect = (action: Action) => void;
 
 export class EffectRegistry {
   private emitChange: any = null;
+  /** actionType and the original effects are kept there in case we want to avoid duplicating effects in the future */
   private effects: { actionType: string; effect: Effect, wrapped: WrappedEffect }[] = [];
 
   public getEffects(): WrappedEffect[] {
