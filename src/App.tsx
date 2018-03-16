@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LazyRoute from 'react-lazy-route';
 import { store } from './state-mgmt/config';
-import { Header } from './layouts/header';
+import Header from './layouts/header/Header';
 
-const Home = () => import('./layouts/home').then(d => d.HomeContainer);
-const Example = () => import('./layouts/example').then(d => d.Example);
+const Home = () => import('./layouts/home/HomeContainer');
+const Example = () => import('./layouts/example/Example');
 
 class App extends React.Component {
   public render(): JSX.Element {

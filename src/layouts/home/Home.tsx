@@ -11,7 +11,7 @@ export interface HomeProps {
   userList: UserModel[];
 }
 
-export class Home extends React.Component<HomeProps, HomeState> {
+export default class Home extends React.Component<HomeProps, HomeState> {
   public state: HomeState;
 
   public componentWillMount(): void {
