@@ -3,22 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prestart": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts-ts start",
-    "prebuild": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "node-sass-chokidar": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-lazy-route": "^0.1.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts-ts": "2.13.0",
-    "tailwindcss": "^0.4.1"
+    "react-scripts-ts": "2.13.0"
   },
   "devDependencies": {
     "@types/jest": "^22.1.3",
